@@ -11,7 +11,7 @@
 
 .ParallaxImage {
   width: 100%;
-  height: 300px;
+  height: calc(100vh - 60px);
   position: relative;
   overflow: hidden;
   font-size: 16px;
