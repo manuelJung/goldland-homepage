@@ -17,7 +17,7 @@ export default function ParallaxImage ({fluid}) {
         <Img fluid={fluid}/>
       </Parallax>
       <div className='content'>
-        <h1>Content</h1>
+        <h1>Goldland</h1>
       </div>
     </div>
   )
