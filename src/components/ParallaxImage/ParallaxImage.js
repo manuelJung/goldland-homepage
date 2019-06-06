@@ -2,6 +2,7 @@
 import * as React from 'react'
 import Img from "gatsby-image"
 import { Parallax } from 'react-scroll-parallax'
+import CutoutText from '../../components/CutoutText'
 import './style.css'
 
 // type Props = {
@@ -17,7 +18,7 @@ export default function ParallaxImage ({fluid}) {
         <Img fluid={fluid}/>
       </Parallax>
       <div className='content'>
-        <h1>Goldland</h1>
+        <CutoutText>Goldland</CutoutText>
       </div>
     </div>
   )
