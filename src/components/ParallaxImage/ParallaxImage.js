@@ -7,9 +7,10 @@ import './style.css'
 
 // type Props = {
 //   fluid: mixed
+//   children: React.Node
 // }
 
-export default function ParallaxImage ({fluid}) {
+export default function ParallaxImage ({fluid, children}) {
   const speed = 1
 
   return (
@@ -17,9 +18,7 @@ export default function ParallaxImage ({fluid}) {
       <Parallax y={[-40, 40]}>
         <Img fluid={fluid}/>
       </Parallax>
-      <div className='content'>
-        <CutoutText>Goldland</CutoutText>
-      </div>
+      {children}
     </div>
   )
 }

@@ -1,3 +1,4 @@
+const path = require(`path`)
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -5,3 +6,12 @@
  */
 
 // You can delete this file if you're not using it
+exports.createPages = ({actions}) => {
+  ['de', 'en', 'mk', 'al'].forEach(lang => {
+    actions.createPage({
+      path: `${lang}/home`,
+      component: path.resolve(`src/templates/home.js`),
+      context: { lang }
+    })
+  })
+}
