@@ -6,6 +6,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import { ParallaxProvider } from 'react-scroll-parallax'
 import { Parallax } from 'react-parallax'
+import ParallaxBackground from '../components/ParallaxBackground'
 
 const IndexPage = () => (
   <ParallaxProvider>
@@ -42,6 +43,9 @@ const IndexPage = () => (
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
       <h1>Hi people</h1>
+      <div style={{height: '100vh'}}>
+        <ParallaxBackground />
+      </div>
       <p>Welcome to your new Gatsby site.</p>
       <p>Now go build something great.</p>
       <h1>Hi people</h1>
