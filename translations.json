@@ -1,0 +1,20 @@
+{
+  "home": {
+    "de": {
+      "header.slogan": "Komm in unser Caffee",
+      "header.pending": "Bald verfügbar"
+    },
+    "en": {
+      "header.slogan": "Com to our coffee",
+      "header.pending": "Coming soon"
+    },
+    "mk": {
+      "header.slogan": "macedonian text",
+      "header.pending": "наскоро"
+    },
+    "al": {
+      "header.slogan": "albanien text",
+      "header.pending": "vjen së shpejti"
+    }
+  }
+}

@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path')
 const readline = require('readline');
 const {google} = require('googleapis');
 
@@ -7,15 +8,20 @@ const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
 // The file token.json stores the user's access and refresh tokens, and is
 // created automatically when the authorization flow completes for the first
 // time.
-const TOKEN_PATH = './spreadsheet/token.json';
+const TOKEN_PATH = './token.json';
+const CREDENTIALS_PATH = './credentials.json'
+const TRANSLATIONS_FILE = '../translations.json'
+const ranges = [
+  'home!A2:E'
+]
 
 const SPREADSHEET_ID = '1zc9sLJogOsz7tRYHky3Vx33lPbm6WX4sp5f1Hna09ck'
 
 // Load client secrets from a local file.
-fs.readFile('./spreadsheet/credentials.json', (err, content) => {
+fs.readFile(path.resolve(__dirname, CREDENTIALS_PATH), (err, content) => {
   if (err) return console.log('Error loading client secret file:', err);
   // Authorize a client with credentials, then call the Google Sheets API.
-  authorize(JSON.parse(content), listMajors);
+  authorize(JSON.parse(content), fetchSheet);
 });
 
 /**
@@ -30,7 +36,7 @@ function authorize(credentials, callback) {
       client_id, client_secret, redirect_uris[0]);
 
   // Check if we have previously stored a token.
-  fs.readFile(TOKEN_PATH, (err, token) => {
+  fs.readFile(path.resolve(__dirname,TOKEN_PATH), (err, token) => {
     if (err) return getNewToken(oAuth2Client, callback);
     oAuth2Client.setCredentials(JSON.parse(token));
     callback(oAuth2Client);
@@ -73,33 +79,36 @@ function getNewToken(oAuth2Client, callback) {
  * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
  */
-function listMajors(auth) {
+function fetchSheet(auth) {
   const sheets = google.sheets({version: 'v4', auth});
-  sheets.spreadsheets.values.get({
+  sheets.spreadsheets.values.batchGet({
     spreadsheetId: SPREADSHEET_ID,
-    range: 'home!A2:E',
+    ranges,
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
-    const rows = res.data.values;
-    if (rows.length) transform(rows)
-    else console.log('No data found.')
+    transform(res.data.valueRanges)
   });
 }
 
-function transform (rows) {
-  rows = rows.map(row => ({
-    id: row[0],
-    german: row[1],
-    english: row[2],
-    macedonian: row[3],
-    albanian: row[4]
-  }))
-  .reduce((p, {id,german,english,macedonian,albanian}) => {
-    p[id] = {german,english,macedonian,albanian}
-    return p
-  }, {})
+function transform (ranges) {
+  let translations = {}
+  ranges.forEach(range => {
+    // name is spreadsheet tab name
+    const name = range.range.split('!')[0]
+    translations[name] = {
+      de: {},
+      en: {},
+      mk: {},
+      al: {}
+    }
+    range.values.forEach(row => {
+      const id = row[0]
+      translations[name].de[id] = row[1]
+      translations[name].en[id] = row[2]
+      translations[name].mk[id] = row[3]
+      translations[name].al[id] = row[4]
+    })
+  })
 
-  const translations = JSON.stringify(rows, null, 2)
-
-  fs.writeFileSync('src/translations.json', translations, 'utf8')
+  fs.writeFileSync(path.resolve(__dirname, TRANSLATIONS_FILE), JSON.stringify(translations,null,2), 'utf8')
 }
