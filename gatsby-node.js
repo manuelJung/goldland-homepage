@@ -1,4 +1,5 @@
 const path = require(`path`)
+const translations = require('./translations.json')
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -11,7 +12,10 @@ exports.createPages = ({actions}) => {
     actions.createPage({
       path: `${lang}/`,
       component: path.resolve(`src/templates/home.js`),
-      context: { lang }
+      context: { 
+        lang,
+        translations: translations.home[lang]
+      }
     })
   })
 }

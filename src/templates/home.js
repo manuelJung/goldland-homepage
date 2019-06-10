@@ -1,17 +1,21 @@
 import * as React from 'react'
+import './style.css'
 import Layout from '../components/layout'
-import Image from "../components/image"
-import { ParallaxProvider } from 'react-scroll-parallax'
+import ParallaxBackground from '../components/ParallaxBackground'
+import CutoutText from '../components/CutoutText'
 
 export default function HomeRoute ({pageContext}) {
   return (
-    <ParallaxProvider>
       <Layout>
-        <div style={{height: '100vh'}}>
-          <Image />
+        <div className='route--home'>
+          <div className='header-image'>
+            <ParallaxBackground>
+              <CutoutText>Goldland</CutoutText>
+              <hr/>
+              <h2>{pageContext.translations['header.pending']}</h2>
+            </ParallaxBackground>
+          </div>
         </div>
-        <h1>HOME ({pageContext.lang})</h1>
       </Layout>
-    </ParallaxProvider>
   )
 }

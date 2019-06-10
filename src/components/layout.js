@@ -25,11 +25,11 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <div style={{
+        {/* <div style={{
           height: 60,
           background: 'silver',
           width: '100%'
-        }}/>
+        }}/> */}
         {children}
       </>
     )}
