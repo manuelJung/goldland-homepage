@@ -1,18 +1,26 @@
 {
   "home": {
     "de": {
+      "site.title": "Goldland",
+      "site.metaDescription": "Goldland - Bald verfügbar",
       "header.slogan": "Komm in unser Caffee",
       "header.pending": "Bald verfügbar"
     },
     "en": {
+      "site.title": "Goldland",
+      "site.metaDescription": "Goldland - Coming soon",
       "header.slogan": "Com to our coffee",
       "header.pending": "Coming soon"
     },
     "mk": {
+      "site.title": "Goldland",
+      "site.metaDescription": "Goldland - наскоро",
       "header.slogan": "macedonian text",
       "header.pending": "наскоро"
     },
     "al": {
+      "site.title": "Goldland",
+      "site.metaDescription": "Goldland - vjen së shpejti",
       "header.slogan": "albanien text",
       "header.pending": "vjen së shpejti"
     }

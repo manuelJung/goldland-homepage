@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react'
 import { useInView } from 'react-intersection-observer'
+import BackgroundImage from 'gatsby-background-image'
 import './style.css'
 
 // type Props = {
@@ -10,7 +11,7 @@ import './style.css'
 // }
 
 export default function ParallaxBackground ({fluid, weight, children}) {
-  weight = 150
+  weight = weight || 150
   const [ref, inView] = useInView()
   const image = React.useRef()
   const lastOffset = React.useRef(0)
@@ -33,10 +34,15 @@ export default function ParallaxBackground ({fluid, weight, children}) {
 
   return (
     <div className='ParallaxBackground' ref={ref}>
-      <div className='img' ref={image} style={{
-        top: -weight,
-        bottom: -weight,
-        height: `calc(100% + ${weight*2}px)`
+      <div 
+        className='img' 
+        ref={image} 
+        children={<BackgroundImage Tag="div" fluid={fluid} />}
+        style={{
+          position: 'absolute',
+          top: -weight,
+          bottom: -weight,
+          height: `calc(100% + ${weight*2}px)`
       }}/>
       {children}
     </div>

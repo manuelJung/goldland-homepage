@@ -9,8 +9,9 @@ const translations = require('./translations.json')
 // You can delete this file if you're not using it
 exports.createPages = ({actions}) => {
   ['de', 'en', 'mk', 'al'].forEach(lang => {
+    const homePath = lang === 'mk' ? '/' : `${lang}/`
     actions.createPage({
-      path: `${lang}/`,
+      path: homePath,
       component: path.resolve(`src/templates/home.js`),
       context: { 
         lang,
