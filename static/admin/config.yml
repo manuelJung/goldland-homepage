@@ -11,7 +11,7 @@ collections:
     delete: false
     files:
       - file: "src/cms/templates/homepage.de.json"
-        name: de
+        name: homepage-de
         label: Homepage (de)
         format: json
         fields:
@@ -21,7 +21,7 @@ collections:
           - {label: Meta Description, name: metaDescription, widget: text, hint: "invisible; important for SEO"}
           - {label: Message, name: message, widget: string}
       - file: "src/cms/templates/homepage.en.json"
-        name: en
+        name: homepage-en
         label: Homepage (en)
         format: json
         fields:
@@ -31,7 +31,7 @@ collections:
           - {label: Meta Description, name: metaDescription, widget: text, hint: "invisible; important for SEO"}
           - {label: Message, name: message, widget: string}
       - file: "src/cms/templates/homepage.mk.json"
-        name: mk
+        name: homepage-mk
         label: Homepage (mk)
         format: json
         fields:
@@ -41,7 +41,7 @@ collections:
           - {label: Meta Description, name: metaDescription, widget: text, hint: "invisible; important for SEO"}
           - {label: Message, name: message, widget: string}
       - file: "src/cms/templates/homepage.al.json"
-        name: al
+        name: homepage-al
         label: Homepage (al)
         format: json
         fields:
