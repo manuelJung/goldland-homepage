@@ -15,7 +15,7 @@ type Props = {
 export default function HomeTemplate ({cms}:Props) {
   const {headerImage} = useStaticQuery(graphql`
     query HeaderImage {
-      headerImage: file(relativePath: { eq: "cornfield3.jpg" }) {
+      headerImage: file(relativePath: { eq: "cornfield6.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
