@@ -8,6 +8,7 @@ public_folder: /img
 collections:
   - name: homepage
     label: Homepage
+    delete: false
     files:
       - file: "src/cms/templates/homepage_de.json"
         name: de
@@ -15,28 +16,32 @@ collections:
         format: json
         fields:
           - {label: Title, name: title, widget: string}
-            {label: Message, name: message, widget: string}
+          - {label: Meta Description, name: metaDescription, widget: text}
+          - {label: Message, name: message, widget: string}
       - file: "src/cms/templates/homepage_en.json"
         name: en
         label: Homepage (en)
         format: json
         fields:
           - {label: Title, name: title, widget: string}
-            {label: Message, name: message, widget: string}
+          - {label: Meta Description, name: metaDescription, widget: text}
+          - {label: Message, name: message, widget: string}
       - file: "src/cms/templates/homepage_mk.json"
         name: mk
         label: Homepage (mk)
         format: json
         fields:
           - {label: Title, name: title, widget: string}
-            {label: Message, name: message, widget: string}
+          - {label: Meta Description, name: metaDescription, widget: text}
+          - {label: Message, name: message, widget: string}
       - file: "src/cms/templates/homepage_al.json"
         name: al
         label: Homepage (al)
         format: json
         fields:
           - {label: Title, name: title, widget: string}
-            {label: Message, name: message, widget: string}
+          - {label: Meta Description, name: metaDescription, widget: text}
+          - {label: Message, name: message, widget: string}
 
 
       
