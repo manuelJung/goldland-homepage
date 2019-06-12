@@ -15,6 +15,28 @@ collections:
         format: json
         fields:
           - {label: Title, name: title, widget: string}
+            {label: Message, name: message, widget: string}
+      - file: "src/cms/templates/homepage_en.json"
+        name: en
+        label: Homepage (en)
+        format: json
+        fields:
+          - {label: Title, name: title, widget: string}
+            {label: Message, name: message, widget: string}
+      - file: "src/cms/templates/homepage_mk.json"
+        name: mk
+        label: Homepage (mk)
+        format: json
+        fields:
+          - {label: Title, name: title, widget: string}
+            {label: Message, name: message, widget: string}
+      - file: "src/cms/templates/homepage_al.json"
+        name: al
+        label: Homepage (al)
+        format: json
+        fields:
+          - {label: Title, name: title, widget: string}
+            {label: Message, name: message, widget: string}
 
 
       
