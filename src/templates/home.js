@@ -23,7 +23,7 @@ export default function HomeRoute ({pageContext, data}) {
               <h2>{pageContext.translations['header.pending']}</h2>
             </ParallaxBackground>
           </div>
-          {/* <div style={{height: 2000}}/> */}
+          <div style={{height: 2000}}/>
         </div>
       </Layout>
   )
