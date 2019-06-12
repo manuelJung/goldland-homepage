@@ -1,5 +1,5 @@
 import * as React from 'react'
-import './style.css'
+import './style.sass'
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from '../components/layout'
 import ParallaxBackground from '../components/ParallaxBackground'
