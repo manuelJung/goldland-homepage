@@ -19,6 +19,7 @@ collections:
           - {label: "Language", name: "language", widget: "hidden", default: "de"}
           - {label: Title, name: title, widget: string, hint: "title will be displayed in browser (SEO)"}
           - {label: Meta Description, name: metaDescription, widget: text, hint: "invisible; important for SEO"}
+          - {label: "Featured Image", name: "featuredImage", widget: image}
           - {label: Message, name: message, widget: string}
       - file: "src/cms/templates/homepage.en.json"
         name: en
@@ -29,6 +30,7 @@ collections:
           - {label: "Language", name: "language", widget: "hidden", default: "en"}
           - {label: Title, name: title, widget: string, hint: "title will be displayed in browser (SEO)"}
           - {label: Meta Description, name: metaDescription, widget: text, hint: "invisible; important for SEO"}
+          - {label: "Featured Image", name: "featuredImage", widget: image}
           - {label: Message, name: message, widget: string}
       - file: "src/cms/templates/homepage.mk.json"
         name: mk
@@ -39,6 +41,7 @@ collections:
           - {label: "Language", name: "language", widget: "hidden", default: "mk"}
           - {label: Title, name: title, widget: string, hint: "title will be displayed in browser (SEO)"}
           - {label: Meta Description, name: metaDescription, widget: text, hint: "invisible; important for SEO"}
+          - {label: "Featured Image", name: "featuredImage", widget: image}
           - {label: Message, name: message, widget: string}
       - file: "src/cms/templates/homepage.al.json"
         name: al
@@ -49,6 +52,7 @@ collections:
           - {label: "Language", name: "language", widget: "hidden", default: "al"}
           - {label: Title, name: title, widget: string, hint: "title will be displayed in browser (SEO)"}
           - {label: Meta Description, name: metaDescription, widget: text, hint: "invisible; important for SEO"}
+          - {label: "Featured Image", name: "featuredImage", widget: image}
           - {label: Message, name: message, widget: string}
 
 
