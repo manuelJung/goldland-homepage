@@ -1,5 +1,7 @@
 {
   "title": "Goldland",
   "metaDescription": "Goldland - Bald verfügbar",
-  "message": "Bald verfügbar"
+  "message": "Bald verfügbar",
+  "templateKey": "homepage",
+  "language": "de"
 }

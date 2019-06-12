@@ -1,5 +1,7 @@
 {
   "title": "Goldland",
   "metaDescription": "Goldland - Coming soon",
-  "message": "Coming soon"
+  "message": "Coming soon",
+  "templateKey": "homepage",
+  "language": "en"
 }

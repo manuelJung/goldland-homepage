@@ -11,8 +11,8 @@ export default function HomeRoute ({pageContext, data}) {
       <Layout>
         <Helmet>
           <html lang={pageContext.lang} />
-          <title>{pageContext.translations['site.title']}</title>
-          <meta name='description' content={pageContext.translations['site.metaDescription']}/>
+          <title>{data.cms.title}</title>
+          <meta name='description' content={data.cms.metaDescription}/>
         </Helmet>
         <div className='route--home'>
           {/* <div style={{height: 2000}}/> */}
@@ -20,7 +20,7 @@ export default function HomeRoute ({pageContext, data}) {
             <ParallaxBackground fluid={data.headerImage.childImageSharp.fluid}>
               <CutoutText>Goldland</CutoutText>
               <hr/>
-              <h2>{pageContext.translations['header.pending']}</h2>
+              <h2>{data.cms.message}</h2>
             </ParallaxBackground>
           </div>
           <div style={{height: 2000}}/>
@@ -30,13 +30,18 @@ export default function HomeRoute ({pageContext, data}) {
 }
 
 export const query = graphql`
-  query {
+  query Homepage ($lang: String){
     headerImage: file(relativePath: { eq: "cornfield3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1200) {
           ...GatsbyImageSharpFluid
         }
       }
+    }
+    cms:templatesJson(templateKey: {eq: "homepage"} language: {eq:$lang}){
+      title
+      metaDescription
+      message
     }
   }
 `

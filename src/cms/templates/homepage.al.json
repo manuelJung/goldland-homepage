@@ -1,5 +1,7 @@
 {
   "title": "Goldland",
   "metaDescription": "Goldland - vjen së shpejti",
-  "message": "vjen së shpejti"
+  "message": "vjen së shpejti",
+  "templateKey": "homepage",
+  "language": "al"
 }

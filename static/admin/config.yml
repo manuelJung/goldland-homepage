@@ -15,6 +15,8 @@ collections:
         label: Homepage (de)
         format: json
         fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "homepage"}
+          - {label: "Language", name: "language", widget: "hidden", default: "de"}
           - {label: Title, name: title, widget: string, hint: "title will be displayed in browser (SEO)"}
           - {label: Meta Description, name: metaDescription, widget: text, hint: "invisible; important for SEO"}
           - {label: Message, name: message, widget: string}
@@ -23,6 +25,8 @@ collections:
         label: Homepage (en)
         format: json
         fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "homepage"}
+          - {label: "Language", name: "language", widget: "hidden", default: "en"}
           - {label: Title, name: title, widget: string, hint: "title will be displayed in browser (SEO)"}
           - {label: Meta Description, name: metaDescription, widget: text, hint: "invisible; important for SEO"}
           - {label: Message, name: message, widget: string}
@@ -31,6 +35,8 @@ collections:
         label: Homepage (mk)
         format: json
         fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "homepage"}
+          - {label: "Language", name: "language", widget: "hidden", default: "mk"}
           - {label: Title, name: title, widget: string, hint: "title will be displayed in browser (SEO)"}
           - {label: Meta Description, name: metaDescription, widget: text, hint: "invisible; important for SEO"}
           - {label: Message, name: message, widget: string}
@@ -39,6 +45,8 @@ collections:
         label: Homepage (al)
         format: json
         fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "homepage"}
+          - {label: "Language", name: "language", widget: "hidden", default: "al"}
           - {label: Title, name: title, widget: string, hint: "title will be displayed in browser (SEO)"}
           - {label: Meta Description, name: metaDescription, widget: text, hint: "invisible; important for SEO"}
           - {label: Message, name: message, widget: string}

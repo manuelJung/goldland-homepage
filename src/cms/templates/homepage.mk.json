@@ -1,5 +1,7 @@
 {
   "title": "Goldland",
   "metaDescription": "Goldland - наскоро",
-  "message": "наскоро"
+  "message": "наскоро",
+  "templateKey": "homepage",
+  "language": "mk"
 }
