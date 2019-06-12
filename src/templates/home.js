@@ -6,7 +6,7 @@ import ParallaxBackground from '../components/ParallaxBackground'
 import CutoutText from '../components/CutoutText'
 import Helmet from "react-helmet"
 
-export default function HomeTemplate ({headerImageFluid, cms, lang}) {
+export default function HomeTemplate ({headerImageFluid, cms}) {
   const {headerImage} = useStaticQuery(graphql`
     query HeaderImage {
       headerImage: file(relativePath: { eq: "cornfield3.jpg" }) {
@@ -18,11 +18,11 @@ export default function HomeTemplate ({headerImageFluid, cms, lang}) {
       }
     }
   `)
-  
+
   return (
       <Layout>
         <Helmet>
-          <html lang={lang} />
+          <html lang={cms.language} />
           <title>{cms.title}</title>
           <meta name='description' content={cms.metaDescription}/>
         </Helmet>

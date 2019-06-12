@@ -6,10 +6,7 @@ const HomeRoutePreview = ({ entry }) => {
 
   if (data) {
     return (
-      <HomePageTemplate
-        lang={data.language}
-        cms={data}
-      />
+      <HomePageTemplate cms={data} />
     )
   } else {
     return <div>Loading...</div>

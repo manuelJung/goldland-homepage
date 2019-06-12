@@ -4,10 +4,7 @@ import HomeTemplate from '../templates/home'
 
 export default function HomeRoute ({pageContext, data}) {
   return (
-    <HomeTemplate
-      lang={pageContext.lang}
-      cms={data.cms}
-    />
+    <HomeTemplate cms={data.cms} />
   )
 }
 
@@ -17,6 +14,7 @@ export const query = graphql`
       title
       metaDescription
       message
+      language
     }
   }
 `
