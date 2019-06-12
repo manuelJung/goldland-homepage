@@ -10,37 +10,37 @@ collections:
     label: Homepage
     delete: false
     files:
-      - file: "src/cms/templates/homepage_de.json"
+      - file: "src/cms/templates/homepage.de.json"
         name: de
         label: Homepage (de)
         format: json
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Meta Description, name: metaDescription, widget: text}
+          - {label: Title, name: title, widget: string, hint: "title will be displayed in browser (SEO)"}
+          - {label: Meta Description, name: metaDescription, widget: text, hint: "invisible; important for SEO"}
           - {label: Message, name: message, widget: string}
-      - file: "src/cms/templates/homepage_en.json"
+      - file: "src/cms/templates/homepage.en.json"
         name: en
         label: Homepage (en)
         format: json
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Meta Description, name: metaDescription, widget: text}
+          - {label: Title, name: title, widget: string, hint: "title will be displayed in browser (SEO)"}
+          - {label: Meta Description, name: metaDescription, widget: text, hint: "invisible; important for SEO"}
           - {label: Message, name: message, widget: string}
-      - file: "src/cms/templates/homepage_mk.json"
+      - file: "src/cms/templates/homepage.mk.json"
         name: mk
         label: Homepage (mk)
         format: json
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Meta Description, name: metaDescription, widget: text}
+          - {label: Title, name: title, widget: string, hint: "title will be displayed in browser (SEO)"}
+          - {label: Meta Description, name: metaDescription, widget: text, hint: "invisible; important for SEO"}
           - {label: Message, name: message, widget: string}
-      - file: "src/cms/templates/homepage_al.json"
+      - file: "src/cms/templates/homepage.al.json"
         name: al
         label: Homepage (al)
         format: json
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Meta Description, name: metaDescription, widget: text}
+          - {label: Title, name: title, widget: string, hint: "title will be displayed in browser (SEO)"}
+          - {label: Meta Description, name: metaDescription, widget: text, hint: "invisible; important for SEO"}
           - {label: Message, name: message, widget: string}
 
 
