@@ -12,7 +12,7 @@ exports.createPages = ({actions}) => {
     const homePath = lang === 'mk' ? '/' : `${lang}/`
     actions.createPage({
       path: homePath,
-      component: path.resolve(`src/templates/home.js`),
+      component: path.resolve(`src/routes/home.js`),
       context: { 
         lang,
         translations: translations.home[lang]
