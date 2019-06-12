@@ -1,3 +1,4 @@
+// @flow
 import * as React from 'react'
 import './style.sass'
 import { useStaticQuery, graphql } from "gatsby"
@@ -5,8 +6,13 @@ import Layout from '../components/layout'
 import ParallaxBackground from '../components/ParallaxBackground'
 import CutoutText from '../components/CutoutText'
 import Helmet from "react-helmet"
+import * as t from '../types'
 
-export default function HomeTemplate ({headerImageFluid, cms}) {
+type Props = {
+  cms: t.HomepageCMS
+}
+
+export default function HomeTemplate ({cms}:Props) {
   const {headerImage} = useStaticQuery(graphql`
     query HeaderImage {
       headerImage: file(relativePath: { eq: "cornfield3.jpg" }) {
