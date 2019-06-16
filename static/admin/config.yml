@@ -10,6 +10,15 @@ collections:
     label: Homepage
     delete: false
     files:
+      - file: "src/cms/templates/homepage.json"
+        name: homepage
+        label: Homepage
+        format: json
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "homepage"}
+          - {label: Title, name: title, widget: language-string, hint: "title will be displayed in browser (SEO)"}
+          - {label: Meta Description, name: metaDescription, widget: language-string, hint: "invisible; important for SEO"}
+          - {label: Message, name: message, widget: language-string}
       - file: "src/cms/templates/homepage.de.json"
         name: homepage-de
         label: Homepage (de)
