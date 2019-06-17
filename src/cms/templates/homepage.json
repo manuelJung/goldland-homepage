@@ -1,56 +1,5 @@
 {
-  "title": [
-    {
-      "language": "en",
-      "value": "german"
-    },
-    {
-      "language": "de",
-      "value": "deutsch"
-    },
-    {
-      "language": "mk",
-      "value": ""
-    },
-    {
-      "language": "al",
-      "value": ""
-    }
-  ],
-  "metaDescription": [
-    {
-      "language": "en",
-      "value": ""
-    },
-    {
-      "language": "de",
-      "value": ""
-    },
-    {
-      "language": "mk",
-      "value": ""
-    },
-    {
-      "language": "al",
-      "value": ""
-    }
-  ],
-  "message": [
-    {
-      "language": "en",
-      "value": ""
-    },
-    {
-      "language": "de",
-      "value": ""
-    },
-    {
-      "language": "mk",
-      "value": ""
-    },
-    {
-      "language": "al",
-      "value": ""
-    }
-  ]
+  "title": null,
+  "metaDescription": null,
+  "message": null
 }
