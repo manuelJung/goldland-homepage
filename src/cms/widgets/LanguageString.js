@@ -1,7 +1,9 @@
 import * as React from 'react'
 
-export default function LanguageString ({value, onChange}) {
+function LanguageString ({value, onChange}) {
   const [index, setIndex] = React.useState(0)
+
+  console.log(value)
 
   React.useEffect(() => {
     if(value) return
@@ -13,23 +15,45 @@ export default function LanguageString ({value, onChange}) {
     ])
   }, [value, onChange])
 
+  const handleChange = React.useCallback(e => {
+    const row = value[index]
+    const newRow = {...row, value: e.target.value}
+    let result = []
+    value.forEach(row => {
+      if(newRow.language === row.language) result.push(newRow)
+      else result.push(row)
+    })
+
+    onChange(result)
+  }, [value, onChange, index])
+
   if(!value) return null
 
   return (
     <div>
       <input style={s.input} value={value[index].value} onChange={handleChange} />
       <div>
-        {value.map(({language}) => 
-          <button style={s.button} key={language} children={language} />
+        {value.map(({language}, i) => 
+          <button 
+            style={s.button}
+            key={language} 
+            children={language} 
+            onClick={() => setIndex(i)}
+          />
         )}
       </div>
     </div>
   )
 }
 
+export default class LanguageStingWrapper extends React.Component {
+  render = () => <LanguageString {...this.props} />
+}
+
 const s = {
   button: {
-    padding: 10
+    padding: 10,
+    background: 'none'
   },
   input: {
     display: 'block',
